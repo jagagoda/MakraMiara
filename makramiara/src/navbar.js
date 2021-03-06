@@ -3,7 +3,7 @@ import {menuData} from "./menu.data";
 import {FaBars} from 'react-icons/fa';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import Log from './images/makramiara_green.svg';
+import Log from './images/makramiara.svg';
 
 
 const MenuBars = styled(FaBars) `
@@ -20,20 +20,16 @@ const MenuBars = styled(FaBars) `
     transform: translate(-100%, 110%);
   }
   `;
-
-const Logo = styled(Link)`
-  align-items: center;
-  padding: 0 2rem;
-  height: 100%;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2.4rem;
-  color: #B8FFCB;
+const SectionNav = styled.div`
+  .logo {
+    width: 15%;
+    color: #083513;
+  }
   &:hover{
     color: #B8FFCB;
   }
-  img {
-    color: #083513;
+  .logo {
+    
   }
   .logo__navbar{
     font-size: 2rem;
@@ -44,8 +40,8 @@ const Logo = styled(Link)`
 const Navbar = ({toggle}) => {
 
     return (
-        <sectionNav className="nav__section">
-            <Logo className="logo__navbar" to='/makramiara'><img src={Log} alt="Logo makramiara" className="logo"/></Logo>
+        <SectionNav className="nav__section">
+            <img src={Log} alt="Logo makramiara" className="logo"/>
             <MenuBars className="menu__bar" onClick={toggle}/>
             <navMenu className= "nav__menu">
                 {menuData.map((item, index) => (
@@ -54,7 +50,7 @@ const Navbar = ({toggle}) => {
                     </navMenuLinks>
                 ))}
             </navMenu>
-        </sectionNav>
+        </SectionNav>
     );
 };
 
