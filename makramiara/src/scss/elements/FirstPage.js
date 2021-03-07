@@ -1,13 +1,12 @@
 import React from "react";
-
-import Navbar from "./_navbar.scss";
+import HomePage from "../../components/HomePage";
 
 
 
 const FirstPage = () => {
     return (
         <>
-            <Navbar/>
+            <HomePage/>
         </>
     );
 };

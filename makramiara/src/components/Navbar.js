@@ -1,5 +1,5 @@
 import React from 'react';
-import {menuData} from "./menu.data";
+import {menuData} from "./Menu.data";
 import {FaBars} from 'react-icons/fa';
 import styled, {css} from 'styled-components';
 import Log from '../images/makramiara.svg';
@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 
 const NavSection = styled.nav`
   height: 80px;
-  background: transparent;
+  background: #F0E0ED;
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
@@ -15,24 +15,22 @@ const NavSection = styled.nav`
   position: fixed;
   width: 100%;
   img {
-    margin-top: 20px;
     min-width: 180px;
   }
 
 `;
 
 const NavLink = css`
+
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 10px 20px;
   height: 100%;
   cursor: pointer;
   text-decoration: none;
   color: #256a05;
   font-size: 0.8rem;
   font-weight: bold;
-  margin-top: 20px;
-
   &:hover {
     color: #fff;
   }
