@@ -12,15 +12,15 @@ const SectionText = styled.div`
   font-size: 2rem;
   font-family: 'Hind', sans-serif;
   h2{
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `;
 
-const Text = () => {
+const Text = (props) => {
     return (
         <SectionText>
             <div>
-                <h2>Gotowe projekty</h2>
+                <h2>{props.text}</h2>
             </div>
         </SectionText>
     );
