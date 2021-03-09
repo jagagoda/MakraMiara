@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const SectionImage = styled.div`
+  min-width: 500px;
   background-color: #F0E0ED;
   display: flex;
   justify-content: center;
@@ -40,8 +41,8 @@ justify-content: center;
 `;
 
 const Api = () => {
-    const refreshPage = ()=> {
-    window.location.reload(false);
+    const refreshPage = () => {
+        window.location.reload(false);
     }
     let [dog, setDog] = useState([]);
     const url = 'https://random.dog/woof.json';
@@ -63,28 +64,6 @@ const Api = () => {
             </SectionImage>
         )
     }
-
-
-    return (
-        <div>
-            <h1>Odśwież stronę</h1>
-        </div>
-    )
 }
-// const Api = () => {
-//     const url = 'https://moonapi.p.rapidapi.com/1606888400';
-//     let [moonPhase, setMoonPhase] = useState(null);
-//
-//     useEffect(() => {
-//         axios.get(url)
-//             .then(response => {
-//                 setMoonPhase(response.data)
-//             })
-//     }, [url])
-//     return (
-//         <div>
-//
-//         </div>
-//     )
-// }
+
 export default Api;

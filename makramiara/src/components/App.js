@@ -5,10 +5,11 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from "./HomePage";
 import About from "./About";
 import Shop from './Shop';
-import Moon from "./Moon";
+import Api from "./Api";
 import Tutorials from "./Tutorials";
-import Projects from "./Projects";
+import Project from "./Project";
 import Calculator from "./Calculator";
+import Macrame1 from "./Macrame1";
 
 function App() {
     return (
@@ -19,9 +20,10 @@ function App() {
                <Route path="/makrama" exact component={About}/>
                <Route path="/miarka" exact component={Calculator}/>
                <Route path="/sklep" exact component={Shop}/>
-               <Route path="/moon" exact render={Moon}/>
+               <Route path="/" exact render={Api}/>
                <Route path="/tutoriale" exact render={Tutorials}/>
-               <Route path="/gotoweprojekty" exact render={Projects}/>
+               <Route path="/gotoweprojekty" exact render={Project}/>
+               <Route path="/macrame1" exact render={Macrame1}/>
            </Switch>
         </Router>
     );

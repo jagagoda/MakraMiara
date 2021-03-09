@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import Hero from './Hero';
 import DropDown from "./DropDown";
 import Projects from "./Projects";
-import Moon from './Moon';
 import Footer from "./Footer";
 import Api from "./Api";
 const HomePage = () => {

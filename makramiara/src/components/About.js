@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import styled from 'styled-components';
-import Kwietnik from '../images/kwietnik.png';
 import Liscie from '../images/liscie.png';
 
 const SectionAbout = styled.div`
