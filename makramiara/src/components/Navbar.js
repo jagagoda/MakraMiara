@@ -66,7 +66,7 @@ const Navbar = ({toggle}) => {
 
     return (
         <NavSection className="nav__section">
-            <img src={Log} alt="Logo makramiara" className="logo"/>
+            <a href="/makramiara"><img src={Log} alt="Logo makramiara" className="logo"/></a>
             <MenuBars className="menu__bar" onClick={toggle}/>
             <NavMenu className= "nav__menu">
                 {menuData.map((item, index) => (

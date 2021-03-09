@@ -53,6 +53,7 @@ const HeroDescription = styled.div`
     color: white;
     font-family: 'Hind', sans-serif;
     border: none;
+    font-size: 1.5rem;
   }
 `;
 

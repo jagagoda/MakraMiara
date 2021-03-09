@@ -199,7 +199,8 @@ function Calculator(props) {
                                 <input type="text" id="stringLength" alt="wpisz długość makramy"/>
                             </div>
                             <div className="form__buttons">
-                                <button onClick={Quantity} onMouseDown={Length}>Oblicz</button>
+                                <button onClick={Quantity} onMouseDown={Length}>Oblicz ilość</button>
+                                <button onClick={Length} onMouseDown={Length}>Oblicz długość</button>
                             </div>
                         </form>
                     </div>

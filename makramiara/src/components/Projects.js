@@ -16,7 +16,6 @@ const ProjectSection = styled.div`
 `;
 
 const ProjectContainer = styled.div`
-  max-height: 80%;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,7 +59,6 @@ const ProjectBoxes = styled.div`
     padding: 30px;
 
     .proj__img {
-      height: 80%;
       width: 80%;
       padding: 20px;
       border: 1px solid #F0E0ED;
@@ -77,17 +75,17 @@ const Projects = (props) => {
                 <ProjectContainer>
                     <ProjectBoxes className="flexbox">
                         <div className="project__column">
-                            <img src={Makrama1} alt="" className="proj__img"/>
+                            <a href="/macrame1"><img src={Makrama1} alt="" className="proj__img"/></a>
                             <h2 className="stat__num"> Kwietnik</h2>
                             <p className="stat__text">Opis kwietnika</p>
                         </div>
                         <div className="project__column">
-                            <img src={Makrama2} alt="" className="proj__img"/>
+                            <a href="/macrame2"><img src={Makrama2} alt="" className="proj__img"/></a>
                             <h2 className="stat__num"> Kwietnik</h2>
                             <p className="stat__text">Opis kwietnika</p>
                         </div>
                         <div className="project__column">
-                            <img src={Makrama3} alt="" className="proj__img"/>
+                            <a href="/macrame3"><img src={Makrama3} alt="" className="proj__img"/></a>
                             <h2 className="stat__num"> Kwietnik</h2>
                             <p className="stat__text">Opis kwietnika</p>
                         </div>
