@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Liscie from '../images/liscie.png';
 
 const SectionAbout = styled.div`
-  margin: 0;
-  box-sizing: border-box;
   width: 100%;
   height: 100vh;
   background-color: #F0E0ED;

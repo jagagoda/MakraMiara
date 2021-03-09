@@ -8,9 +8,7 @@ import Makrama02 from '../images/pióra.png';
 
 const ProjectSection = styled.div`
   height: 100vh;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #083513;
+  background-color: #05260c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +24,6 @@ const ProjectContainer = styled.div`
   padding: 50px;
 
   h1 {
-    font-family: 'Hind', sans-serif;
     font-size: 2rem;
     color: white;
   }
@@ -62,7 +59,6 @@ const ProjectBoxes = styled.div`
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    margin: 0;
     padding: 30px;
 
     img {

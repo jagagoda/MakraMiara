@@ -1,6 +1,5 @@
 import React from "react";
-import '../scss/_main.scss';
-import '../App.scss';
+import '../App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from "./HomePage";
 import About from "./About";
@@ -10,10 +9,12 @@ import Tutorials from "./Tutorials";
 import Project from "./Project";
 import Calculator from "./Calculator";
 import Macrame1 from "./Macrame1";
+import GlobalStyle from "./GlobalStyles";
 
 function App() {
     return (
         <Router>
+            <GlobalStyle/>
            <Switch>
                <Route path="/" exact component={HomePage}/>
                <Route path="/makramiara" exact component={HomePage}/>
@@ -23,7 +24,7 @@ function App() {
                <Route path="/" exact render={Api}/>
                <Route path="/tutoriale" exact render={Tutorials}/>
                <Route path="/gotoweprojekty" exact render={Project}/>
-               <Route path="/macrame1" exact render={Macrame1}/>
+               <Route path="/macrame3" exact render={Macrame1}/>
            </Switch>
         </Router>
     );

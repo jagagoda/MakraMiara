@@ -36,8 +36,7 @@ const HeroSection = styled.section`
 const HeroDescription = styled.div`
   width: 85%;
   background-color: transparent;
-  font-family: 'Hind', sans-serif;
-  color: #256a05;
+  color: #304c28;
   z-index: 1;
 
   p {
@@ -47,11 +46,10 @@ const HeroDescription = styled.div`
   }
 
   .hero__button {
-    background-color: #256a05;
+    background-color: #304c28;
     padding: 10px 30px;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     color: white;
-    font-family: 'Hind', sans-serif;
     border: none;
     font-size: 1.5rem;
   }

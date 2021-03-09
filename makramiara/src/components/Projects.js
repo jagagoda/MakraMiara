@@ -7,9 +7,7 @@ import { Redirect } from 'react-router-dom';
 
 const ProjectSection = styled.div`
   height: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  background-color: #083513;
+  background-color: #05260c;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -26,29 +24,23 @@ const ProjectSection = styled.div`
   }
 
   button {
-    padding: 5px 30px;
+    padding: 10px 30px;
     background-color: #F0E0ED;
-    font-family: 'Hind', sans-serif;
     color: #083513;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border: none;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     margin-top: 50px;
+    cursor: pointer;
   }
 
   img {
-    width: auto;
-    height: 600px;
-
+    width: 700px;
+    height: auto;
     border: 2px solid #F0E0ED;
     background-color: #F0E0ED;
     padding: 20px;
-    //border-bottom-right-radius: 600px;
-    //border-top-left-radius: 20px;
-    //border-bottom-left-radius: 20px;
-    //border-top-right-radius: 20px ;
-    //
   }
 `;
 const ProjectContainer = styled.div`
@@ -90,7 +82,7 @@ const Projects = () => {
                     <p>K</p>
                     <p>T</p>
                     <p>Y</p>
-                    <button onClick={() => setIsSubmit(false)} className="button">Zobacz więcej</button>
+                    <button onClick={() => setIsSubmit(false)} className="button">Zobacz więcej!</button>
                 </div>
             </ProjectSection>
 

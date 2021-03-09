@@ -10,7 +10,6 @@ const SectionText = styled.div`
   background-color: #083513;
   color: white;
   font-size: 2rem;
-  font-family: 'Hind', sans-serif;
   h2{
     margin-top: 30px;
   }

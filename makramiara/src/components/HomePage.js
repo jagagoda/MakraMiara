@@ -5,6 +5,8 @@ import DropDown from "./DropDown";
 import Projects from "./Projects";
 import Footer from "./Footer";
 import Api from "./Api";
+import ScrollToTop from "./ScrollToTop";
+
 const HomePage = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => {
@@ -18,6 +20,7 @@ const HomePage = () => {
             <Projects/>
             <Api/>
             <Footer/>
+            <ScrollToTop/>
         </>
     )
 }
