@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "./Navbar";
 import styled from 'styled-components';
 import Liscie from '../images/liscie.png';
+import BarMenu from "./BarMenu";
 
 const SectionAbout = styled.div`
   width: 100%;
@@ -55,7 +56,7 @@ const AboutContainer = styled.div`
 const About = () => {
     return (
         <>
-            <Navbar/>
+            <BarMenu/>
             <SectionAbout>
                 <AboutContainer>
                     <h2>O makramie</h2>

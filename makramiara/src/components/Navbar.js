@@ -2,23 +2,26 @@ import React from 'react';
 import {menuData} from "./Menu.data";
 import {FaBars} from 'react-icons/fa';
 import styled, {css} from 'styled-components';
-import Log from '../images/makramiara.svg';
+import Log from '../images/logo-pink.svg';
 import {Link} from 'react-router-dom';
 
 const NavSection = styled.nav`
-  height: 90px;
-  background: #F0E0ED;
+  height: 150px;
+  background-color: #ffff;
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  justify-content: flex-end;
   z-index: 100;
   position: fixed;
-  width: 100%;
+  width: 90%;
+  margin: 0 100px 0 100px;
+  border-radius: 0 0 25px 25px;
+
 
   .logo {
-    min-width: 180px;
-    max-height: 90px;
+    height: 65px;
     padding-bottom: 10px;
+    margin-top: 40px;
+    margin-right: 300px;
 `;
 
 const NavLink = css`
@@ -29,12 +32,13 @@ const NavLink = css`
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  color: #3b6531;
-  font-size: 1rem;
+  color: #E8505B;
+  font-size: 14px;
   font-weight: bold;
+  margin-right: 15px;
 
   &:hover {
-    color: #fff;
+    filter: brightness(2);
   }
 `;
 
@@ -44,7 +48,7 @@ const MenuBars = styled(FaBars)`
   @media screen and (max-width: 768px) {
     display: block;
     cursor: pointer;
-    color: #3b6531;
+    color: #E8505B;
     position: absolute;
     height: 1.6em;
     width: 1.6em;
@@ -76,10 +80,8 @@ const Navbar = ({toggle}) => {
             <NavMenu className="nav__menu">
                 <a className="menu__links" href='/makrama' alt="O makramie">O makramie</a>
                 <a className="menu__links" href='/miarka' alt="Kalkulator - miarka sznurków">Miarka</a>
-                <a className="menu__links" href='/' alt="obrazki piesków">Pies TV</a>
-                <a className="menu__links" href='https://www.auamacrame.pl' alt="Sklep z makramami">Sklep</a>
-                <a className="menu__links" href='/Tutoriale' alt="tutoriale">Tutoriale</a>
-                <a className="menu__links" href='/gotoweprojekty' alt="gotowe projekty makram">Gotowe projekty</a>
+                <a className="menu__links" href='/Tutoriale' alt="tutoriale">Tutorial</a>
+                <a className="menu__links" href='/galeria' alt="Galeria">Galeria</a>
             </NavMenu>
         </NavSection>
     );
@@ -87,8 +89,3 @@ const Navbar = ({toggle}) => {
 
 export default Navbar;
 
-// {menuData.map((item, index) => (
-//     <NavMenuLinks className="menu__links" to={item.link} key={index}>
-//         {item.title}
-//     </NavMenuLinks>
-// ))}

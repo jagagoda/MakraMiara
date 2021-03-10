@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Navbar from "./Navbar";
 import styled from 'styled-components';
 import Woman from '../images/woman.svg';
+import BarMenu from "./BarMenu";
 
 const SectionCalculator = styled.div`
   display: flex;
@@ -118,6 +119,9 @@ const SectionContainer = styled.div`
   border-radius: 50px;
   padding: 10px 0 40px 0;
   position: relative;
+  @media screen and (max-width: 768px) {
+    border: 5px solid transparent;
+  }
 
   img {
     position: absolute;
@@ -185,7 +189,7 @@ function Calculator(props) {
 
     return (
         <>
-            <Navbar/>
+            <BarMenu/>
             <SectionCalculator>
                 <SectionContainer>
                     <img src={Woman} alt="leżąca kobieta"/>

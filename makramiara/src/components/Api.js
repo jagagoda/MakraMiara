@@ -1,85 +1,108 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import Lights from '../images/lights.svg';
 
-const SectionImage = styled.div`
-  min-width: 500px;
-  background-color: #e3d0e0;
+const ImageBox = styled.div`
+  min-height: 700px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  background-image: url(${Lights});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  flex-direction: column;
-
-  button {
-    background-color: #05260c;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 15px;
-    border: none;
-    margin-top: 15px;
-    align-items: center;
-    font-size: 1.15rem;
-  }
+  width: 100%;
+  min-height: 1500px;
+  background-color: #F4F4F4;
 
   h2 {
-    font-size: 1.5rem;
-    color: #05260c;
+    font-size: 75px;
+    color: #263238;
     align-items: center;
     text-align: center;
     padding: 10px;
     font-weight: bold;
+    margin-bottom: 50px;
   }
 
   img {
-    width: auto;
-    height: 300px;
-    border: 30px solid #05260c;
+    margin-top: 100px;
+    width: 50%;
+    border: none;
+  }
+
+  button {
+    background-color: #263238;
+    color: white;
+    padding: 30px 60px;
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  img {
+    height: 400px;
     border-radius: 20px;
     padding: 10px;
+    width: auto;
+    border: none;
   }
 `;
-// const refreshPage = () => {
-//     window.location.reload(false);
-// }
 
 const Api = () => {
-
+    const [refresh, setRefresh] = useState(false);
     let [dog, setDog] = useState([]);
-
     const url = 'https://random.dog/woof.json';
     useEffect(() => {
-            axios.request(url).then(response => {
-                let hau;
-                console.log(response.data.url.indexOf(".mp4"));
-                if (response.data.url.indexOf(".mp4") === -1) {
-                    hau = <img className="image" src={response.data.url} alt="losowy piesek"/>
-                } else {
-                    hau = <video scr={response.data.url}/>
-                }
-                setDog(hau);
-                console.log(response.data);
-            })
-                .catch(error => console.error(error));
-        }, [url]);
+
+        axios.request(url).then(response => {
+            let hau;
+            console.log(response.data.url.indexOf(".mp4"));
+            if (response.data.url.indexOf(".mp4") === -1) {
+                hau = <img className="image" src={response.data.url} alt="losowy piesek"/>
+            } else {
+                hau =
+                    (<video width="650" height="400" controls>
+                        <source src={response.data.url} type="video/mp4"/>
+                    </video>)
+            }
+            setDog(hau);
+            console.log(response.data);
+        })
+            .catch(error => console.error(error));
+    }, [url, refresh]);
 
     if (dog) {
         return (
-            <SectionImage>
+            <>
                 <ImageContainer>
-                    <h2>Psia telewizja na dobry dzień</h2>
-                    {
-                        dog
-                    }
-                    <button className='refresh__button'>Wylosuj pieska</button>
+                    <ImageBox>
+                        <h2>Psia telewizja</h2>
+                        {
+                            dog
+                        }
+                        <button onClick={(e) => {
+                            setRefresh(!refresh)
+                        }} className='refresh__button'>pies raz!
+                        </button>
+                    </ImageBox>
                 </ImageContainer>
-            </SectionImage>
+            </>
+
         )
     }
 }

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import HomeMacrame from '../images/homemacrame.jpg';
-import Navbar from "./Navbar";
+import Brelok from '../images/brelok.jpg';
 import Makrama01 from '../images/6.png';
 import Makrama02 from '../images/pióra.png';
+import BarMenu from "./BarMenu";
 
 
 const ProjectSection = styled.div`
@@ -13,6 +13,9 @@ const ProjectSection = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media screen and (max-width: 768px) {
+  height: 100%;
+  }
 `;
 
 const ProjectContainer = styled.div`
@@ -22,6 +25,11 @@ const ProjectContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 50px;
+  @media screen and (max-width: 768px) {
+    height: 50%;
+    width: 50%;
+  }
+ 
 
   h1 {
     font-size: 2rem;
@@ -37,6 +45,8 @@ const ProjectBoxes = styled.div`
   margin: 30px 50px 0 50px;
   @media screen and (max-width: 768px) {
     display: block;
+    justify-content: center;
+    margin: 50px 0 0 0;
   }
 
   h2 {
@@ -60,6 +70,9 @@ const ProjectBoxes = styled.div`
     align-items: center;
     text-align: center;
     padding: 30px;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
 
     img {
       width: 400px;
@@ -70,6 +83,11 @@ const ProjectBoxes = styled.div`
       &:hover {
         transform: scale(1.1);
         transition: 0.5s;
+        @media screen and (max-width: 768px) {
+          transform: none;
+          width: 25%;
+          height: 25%;
+        }
       }
     }
     span {
@@ -82,24 +100,22 @@ const Project = (props) => {
 
     return (
         <>
-            <Navbar/>
+            <BarMenu/>
             <ProjectSection>
                 <ProjectContainer>
                     <ProjectBoxes className="flexbox">
                         <div className="project__column">
-                            <a href="/macrame1"><img src={HomeMacrame} alt="" className="proj__img"/></a>
-                            <h2 className="stat__num">Makrama ścienna</h2>
-                            <p className="stat__text">Makrama ścienna w stylu boho<span>(Kliknij w zdjęcie, by dowiedzieć się więcej)</span></p>
+                            <a href="/macrame1"><img src={Brelok} alt="" className="proj__img"/></a>
+                            <h2 className="stat__num">Makramowy brelok</h2>
                         </div>
                         <div className="project__column">
                             <a href="/macrame2"><img src={Makrama01} alt="" className="proj__img"/></a>
-                            <h2 className="stat__num"> Kwietnik</h2>
-                            <p className="stat__text">Kwietnik wiszący<span>(Kliknij w zdjęcie, by dowiedzieć się więcej)</span></p>
+                            <h2 className="stat__num">Kwietnik</h2>
+
                         </div>
                         <div className="project__column">
                             <a href="/macrame3"><img src={Makrama02} alt="" className="proj__img"/></a>
                             <h2 className="stat__num"> Piórka</h2>
-                            <p className="stat__text">Ozdobne piórka na naturalnym kiju<span>(Kliknij w zdjęcie, by dowiedzieć się więcej)</span></p>
                         </div>
                     </ProjectBoxes>
                 </ProjectContainer>
