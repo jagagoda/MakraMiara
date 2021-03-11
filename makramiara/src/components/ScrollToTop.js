@@ -12,7 +12,7 @@ const Scroll = styled.div`
   border-radius: 15px;
   background-color: transparent;
   z-index: 1;
-  color: #256a05;
+  color: #E8505B;
   text-align: center;
   display: flex;
   align-items: center;
