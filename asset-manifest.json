@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.afd7172b.chunk.css",
-    "main.js": "/static/js/main.ac365399.chunk.js",
-    "main.js.map": "/static/js/main.ac365399.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4f99abc6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4f99abc6.js.map",
-    "static/js/2.9af0f314.chunk.js": "/static/js/2.9af0f314.chunk.js",
-    "static/js/2.9af0f314.chunk.js.map": "/static/js/2.9af0f314.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.afd7172b.chunk.css.map": "/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.9af0f314.chunk.js.LICENSE.txt": "/static/js/2.9af0f314.chunk.js.LICENSE.txt",
-    "static/media/6.2b93e4a5.png": "/static/media/6.2b93e4a5.png",
-    "static/media/brelok.4c339fdb.jpg": "/static/media/brelok.4c339fdb.jpg",
-    "static/media/bucket.8d568eb7.svg": "/static/media/bucket.8d568eb7.svg",
-    "static/media/flower-bucket.dc79b5de.svg": "/static/media/flower-bucket.dc79b5de.svg",
-    "static/media/lady.39b5e4f9.svg": "/static/media/lady.39b5e4f9.svg",
-    "static/media/lights.59ea7040.svg": "/static/media/lights.59ea7040.svg",
-    "static/media/logo-pink.e76a1e9a.svg": "/static/media/logo-pink.e76a1e9a.svg",
-    "static/media/logo-white.e816f3e6.svg": "/static/media/logo-white.e816f3e6.svg",
-    "static/media/macrame.e35c720e.png": "/static/media/macrame.e35c720e.png",
-    "static/media/pióra.5eb93965.png": "/static/media/pióra.5eb93965.png"
+    "main.css": "/MakraMiara/static/css/main.afd7172b.chunk.css",
+    "main.js": "/MakraMiara/static/js/main.05befec9.chunk.js",
+    "main.js.map": "/MakraMiara/static/js/main.05befec9.chunk.js.map",
+    "runtime-main.js": "/MakraMiara/static/js/runtime-main.fc9fcaa5.js",
+    "runtime-main.js.map": "/MakraMiara/static/js/runtime-main.fc9fcaa5.js.map",
+    "static/js/2.00059c8d.chunk.js": "/MakraMiara/static/js/2.00059c8d.chunk.js",
+    "static/js/2.00059c8d.chunk.js.map": "/MakraMiara/static/js/2.00059c8d.chunk.js.map",
+    "index.html": "/MakraMiara/index.html",
+    "static/css/main.afd7172b.chunk.css.map": "/MakraMiara/static/css/main.afd7172b.chunk.css.map",
+    "static/js/2.00059c8d.chunk.js.LICENSE.txt": "/MakraMiara/static/js/2.00059c8d.chunk.js.LICENSE.txt",
+    "static/media/6.2b93e4a5.png": "/MakraMiara/static/media/6.2b93e4a5.png",
+    "static/media/brelok.4c339fdb.jpg": "/MakraMiara/static/media/brelok.4c339fdb.jpg",
+    "static/media/bucket.8d568eb7.svg": "/MakraMiara/static/media/bucket.8d568eb7.svg",
+    "static/media/flower-bucket.dc79b5de.svg": "/MakraMiara/static/media/flower-bucket.dc79b5de.svg",
+    "static/media/lady.39b5e4f9.svg": "/MakraMiara/static/media/lady.39b5e4f9.svg",
+    "static/media/lights.59ea7040.svg": "/MakraMiara/static/media/lights.59ea7040.svg",
+    "static/media/logo-pink.e76a1e9a.svg": "/MakraMiara/static/media/logo-pink.e76a1e9a.svg",
+    "static/media/logo-white.e816f3e6.svg": "/MakraMiara/static/media/logo-white.e816f3e6.svg",
+    "static/media/macrame.e35c720e.png": "/MakraMiara/static/media/macrame.e35c720e.png",
+    "static/media/pióra.5eb93965.png": "/MakraMiara/static/media/pióra.5eb93965.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f99abc6.js",
-    "static/js/2.9af0f314.chunk.js",
+    "static/js/runtime-main.fc9fcaa5.js",
+    "static/js/2.00059c8d.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.ac365399.chunk.js"
+    "static/js/main.05befec9.chunk.js"
   ]
 }
