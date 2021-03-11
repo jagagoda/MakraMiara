@@ -35,7 +35,7 @@ const NavLink = css`
   color: #E8505B;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 25px;
 
   &:hover {
     filter: brightness(2);
@@ -68,8 +68,6 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
-const NavMenuLinks = styled(Link)`
-  ${NavLink};`;
 
 const Navbar = ({toggle}) => {
 

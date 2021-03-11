@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Lady from '../images/lady.svg';
 import Logo from '../images/logo-pink.svg';
 import styled from 'styled-components';
+import { Redirect } from 'react-router-dom';
 
 const SectionText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
 
   h2 {
     color: #E8505B;
@@ -31,6 +31,8 @@ const SectionText = styled.div`
     border: none;
     font-weight: bold;
     margin-top: 700px;
+    cursor: pointer;
+    outline: none;
   }
 `;
 
@@ -58,6 +60,10 @@ const MiarkaSection = styled.div`
 `;
 
 const Miarka = () => {
+    const [isSubmit, setIsSubmit] = useState(true);
+    if (!isSubmit) {
+        return (<Redirect to="/miarka"/>)
+    }
     return (
         <MiarkaSection>
             <div className="miarka__box">
@@ -66,7 +72,7 @@ const Miarka = () => {
                         <h2>Kalkulator</h2>
                         <img className="logo" src={Logo} alt="Logo makramiara"/>
                     </div>
-                    <button>zmierz się</button>
+                    <button onClick={() => setIsSubmit(false)}>zmierz się</button>
                 </SectionText>
             </div>
         </MiarkaSection>

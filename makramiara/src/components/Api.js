@@ -49,9 +49,10 @@ const ImageContainer = styled.div`
     border-radius: 60px;
     font-size: 20px;
     font-weight: bold;
-    border: none;
     margin-top: 30px;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
   }
 
   img {

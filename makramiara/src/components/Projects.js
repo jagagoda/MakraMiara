@@ -32,34 +32,29 @@ const ProjectSection = styled.div`
 
 
   a img {
-    width: 512px;
+    width: 400px;
     height: 512px;
     background-color: #ffff;
     border-radius: 25px;
-    padding: 20px;
     margin: 20px;
   }
 `;
 const ProjectContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
 
   .box {
     border: none;
     border-radius: 25px;
-    background-color: #ffff;
+    background-color: #F4F4F4;
     height: 650px;
-    margin-left: 30px;
+    margin-left: 50px;
   }
 `;
 
 
 const Projects = () => {
-    const [isSubmit, setIsSubmit] = useState(true);
-    if (!isSubmit) {
-        return (<Redirect to="/galeria"/>)
-    }
     return (
         <>
             <ProjectSection>

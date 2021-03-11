@@ -11,14 +11,17 @@ const SectionFooter = styled.div`
   border-radius: 25px 25px 0 0;
   min-height: 622px;
   width: 100%;
+  padding-bottom: 30px;
   p {
     color: #ffff;
     padding: 30px;
-    font-size: 25px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .logo__icon {
-    width: 10%
+    width: 10%;
+    padding-bottom: 30px;
   }
 `;
 

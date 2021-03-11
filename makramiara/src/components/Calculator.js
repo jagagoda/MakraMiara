@@ -1,17 +1,41 @@
 import React, {useState, useEffect} from "react";
-import Navbar from "./Navbar";
+import Lady from '../images/lady.svg';
 import styled from 'styled-components';
-import Woman from '../images/woman.svg';
 import BarMenu from "./BarMenu";
+import Logo from "../images/logo-white.svg";
 
+const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #263238;
+  border-radius: 25px 25px 0 0;
+  min-height: 320px;
+  width: 100%;
+  padding-bottom: 30px;
+
+  p {
+    color: #ffff;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10;
+  }
+
+  .logo__icon {
+    width: 10%;
+    padding-bottom: 30px;
+  }
+`;
 const SectionCalculator = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #F0E0ED;
-  max-height: 100%;
+  background-color: #F4F4F4;
+  min-height: 1200px;
   width: 100%;
-  min-height: 1000px;
 
   .calculators {
     display: flex;
@@ -24,8 +48,8 @@ const SectionCalculator = styled.div`
   }
 
   h2 {
-    font-size: 2rem;
-    color: #3b6531;
+    font-size: 75px;
+    color: #E8505B;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -54,9 +78,11 @@ const SectionCalculator = styled.div`
   }
 
   label {
-    font-size: 1.5rem;
-    color: #3b6531;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: #263238;
     padding: 20px 20px;
+    z-index: 10;
   }
 
   input {
@@ -74,13 +100,17 @@ const SectionCalculator = styled.div`
   }
 
   button {
-    background-color: #3b6531;
+    background-color: #263238;
+    font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     border: none;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    border-radius: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px 60px;
     margin-left: 10px;
+    z-index: 10;
+    outline: none;
   }
 
   .button__clear {
@@ -113,24 +143,31 @@ const SectionCalculator = styled.div`
   }
 `;
 const SectionContainer = styled.div`
-  margin-top: 150px;
   width: 1200px;
-  border: 5px solid #3b6531;
-  border-radius: 50px;
+  border-radius: 25px;
   padding: 10px 0 40px 0;
+  background-color: #ffff;
   position: relative;
+  margin-bottom: 200px;
   @media screen and (max-width: 768px) {
     border: 5px solid transparent;
+  }
+  input {
+    border-bottom: 2px solid #263238;
+    border-radius: 0;
+    outline: none;
+    color: #263238 ;
+    font-family: 'Open Sans', sans-serif;
   }
 
   img {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 600px;
-    height: auto;
+    width: 100%;
+    height: 600px;
     padding: 20px;
-    transform: translate(85%, -75%);
+    transform: translate(0, 63%);
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -191,9 +228,8 @@ function Calculator(props) {
         <>
             <BarMenu/>
             <SectionCalculator>
+                <h2>Kalkulator</h2>
                 <SectionContainer>
-                    <img src={Woman} alt="leżąca kobieta"/>
-                    <h2>Oblicz ile sznurka potrzebujesz, aby stworzyć wymarzoną makramę!</h2>
                     <div className="calculators">
                         <form className="form__calculator">
                             <div className="calc__input">
@@ -233,12 +269,17 @@ function Calculator(props) {
                                 <label>cm</label>
                             </div>
                             <div className="button__clear">
-                                <button onClick={Clear}>Wyczyść</button>
+                                <button onClick={Clear}>wyczyść</button>
                             </div>
                         </form>
                     </div>
+                    <img src={Lady} alt="kobieta z linijką i nożyczkami"/>
                 </SectionContainer>
             </SectionCalculator>
+            <Footer>
+                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+                <p>Made by Jagoda Frątczak 2021</p>
+            </Footer>
         </>
     );
 }

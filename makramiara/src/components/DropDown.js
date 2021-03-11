@@ -10,7 +10,7 @@ const DropdownContainer = styled.div`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: #083513;
+  background-color: #F4F4F4;
   display: grid;
   align-items: center;
   left: 0;
@@ -31,7 +31,7 @@ const Icon = styled.div`
   outline: none;
 `;
 const CloseIcon = styled(FaTimes)`
-  color: #F0E0ED;
+  color: #E8505B;
 `;
 const DropDownWrapper = styled.div``;
 const DropDownMenu = styled.div`
@@ -48,7 +48,7 @@ const DropDownLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #F0E0ED;
+  color: #263238;
   font-size: 1.5rem;
   text-decoration: none;
   list-style: none;

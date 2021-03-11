@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Macrame from '../images/macrame.png';
-import { Redirect } from 'react-router-dom';
+
 
 const HeroSection = styled.section`
   display: flex;
@@ -25,16 +25,6 @@ const HeroSection = styled.section`
     margin-top: 100px;
     flex: 1;
     margin-left: 300px;
-    //position: absolute;
-    //
-    //top: 0;
-    //left: 0;
-    //transform: translate(60%, 14%);
-    //opacity: 0.9;
-    //@media screen and (max-width: 786px) {
-    //  width: 80%;
-    //  transform: translate(14%, 30%);
-    //}
   }
 `;
 
@@ -63,10 +53,7 @@ const HeroDescription = styled.div`
 `;
 
 const Hero = () => {
-    const [isSubmit, setIsSubmit] = useState(true);
-    if (!isSubmit) {
-        return (<Redirect to="/miarka"/>)
-    }
+
     return (
         <HeroSection>
             <div className="image">
@@ -74,7 +61,6 @@ const Hero = () => {
             </div>
             <HeroDescription>
                 <p>Policz ile metrów<br/>sznurka potrzebujesz<br/> do stworzenia swojej<br/> makramy.</p>
-                {/*<button onClick={() => setIsSubmit(false)} className="hero__button">ZMIERZ SIĘ Z TYM!</button>*/}
             </HeroDescription>
         </HeroSection>
     );

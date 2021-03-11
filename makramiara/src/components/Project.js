@@ -4,11 +4,12 @@ import Brelok from '../images/brelok.jpg';
 import Makrama01 from '../images/6.png';
 import Makrama02 from '../images/pióra.png';
 import BarMenu from "./BarMenu";
+import Logo from "../images/logo-white.svg";
 
 
 const ProjectSection = styled.div`
   height: 100vh;
-  background-color: #05260c;
+  background-color: #F4F4F4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,13 +52,13 @@ const ProjectBoxes = styled.div`
 
   h2 {
     font-size: 1.8rem;
-    color: #F0E0ED;
+    color: #263238;
     font-weight: bold;
   }
 
   p {
     font-size: 1.2rem;
-    color: #F0E0ED;
+    color: #263238;
     display: flex;
     flex-direction: column;
   }
@@ -78,8 +79,8 @@ const ProjectBoxes = styled.div`
       width: 400px;
       height: 520px;
       padding: 20px;
-      border: 1px solid #F0E0ED;
-      background-color: #F0E0ED;
+      border: 1px solid #F4F4F4;
+      background-color: #F4F4F4;
       &:hover {
         transform: scale(1.1);
         transition: 0.5s;
@@ -95,6 +96,29 @@ const ProjectBoxes = styled.div`
     }
   }
 `;
+const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #263238;
+  border-radius: 25px 25px 0 0;
+  min-height: 320px;
+  width: 100%;
+  padding-bottom: 30px;
+  p {
+    color: #ffff;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10;
+  }
+
+  .logo__icon {
+    width: 10%;
+    padding-bottom: 30px;
+  }
+  `;
 
 const Project = (props) => {
 
@@ -120,6 +144,10 @@ const Project = (props) => {
                     </ProjectBoxes>
                 </ProjectContainer>
             </ProjectSection>
+            <Footer>
+                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+                <p>Made by Jagoda Frątczak 2021</p>
+            </Footer>
         </>
     );
 };

@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Brelok from '../images/brelok.jpg';
 import BarMenu from "./BarMenu";
+import Logo from "../images/logo-white.svg";
 
 const SectionMacrame = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #F0E0ED;
+  background-color: #F4F4F4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +21,7 @@ const ProjectBox = styled.div`
   @media screen and (max-width: 768px) {
     justify-content: center;
     flex-direction: column;
-    background-color: #F0E0ED;
+    background-color: #F4F4F4;
     margin-top: 150px;
   }
 
@@ -30,7 +31,7 @@ const ProjectBox = styled.div`
     padding: 20px;
     margin-top: 20px;
     @media screen and (max-width: 768px) {
-      background-color: #F0E0ED;
+      background-color: #F4F4F4;
       margin-top: 200px;
       border: none;
       height: 100%;
@@ -44,13 +45,13 @@ const ProjectBox = styled.div`
 
   h2 {
     font-size: 1.8rem;
-    color: #3b6531;
+    color: #263238;
     font-weight: bold;
   }
 
   p {
     font-size: 1.5rem;
-    color: #3b6531;
+    color: #263238;
     padding: 50px;
   }
 
@@ -62,12 +63,35 @@ const ProjectBox = styled.div`
     text-align: center;
     li {
       font-size: 1.2rem;
-      color: #3b6531;
+      color: #263238;
       padding: 10px;
       text-align: left;
     }
   }
 `;
+const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #263238;
+  border-radius: 25px 25px 0 0;
+  min-height: 320px;
+  width: 100%;
+  padding-bottom: 30px;
+  p {
+    color: #ffff;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10;
+  }
+
+  .logo__icon {
+    width: 10%;
+    padding-bottom: 30px;
+  }
+  `;
 
 const Macrame1 = () => {
     return (
@@ -89,6 +113,10 @@ const Macrame1 = () => {
                     </div>
                 </ProjectBox>
             </SectionMacrame>
+            <Footer>
+                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+                <p>Made by Jagoda Frątczak 2021</p>
+            </Footer>
         </>
     );
 };

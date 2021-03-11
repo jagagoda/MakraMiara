@@ -1,18 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+import Bucket from '../images/flower-bucket.svg';
 
+const NewsBox = styled.div`
+background-color: #ffff;
+  padding: 60px 150px 60px 150px;
+  border-radius: 25px;
+  margin-top: 30px;
+  position: relative;
+  img {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    transform: translate(-30%, 75%);
+  }
+  
+`;
 
 const NewsletterSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F0E0ED;
+  background-color: #F4F4F4;
   height: 200px;
-
+h2{
+  color: #E8505B;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
   h1 {
-    color: #304c28;
-    font-size: 1.5rem;
+    color: #E8505B;
+    font-size: 75px;
   }
 
   label {
@@ -21,19 +43,31 @@ const NewsletterSection = styled.div`
     text-align: center;
   }
 
-  input {
+  input[type=submit] {
+    border: none;
+    border-radius: 60px;
+    color: #ffff;
+    background-color: #E8505B;
     margin: 20px 0 20px 30px;
     text-align: center;
     padding: 10px 20px;
-
-    .button {
-      color: blueviolet;
-    }
+    height: 100px;
+    width: 200px;
+    font-size: 1.5rem;
+    font-family: 'Open sans', sans-serif;
+    outline: none;
   }
 
-  form {
+  input[type=email] {
+    border: none;
+    border-bottom: 2px solid #263238;
+    color: #263238;
+    padding: 15px 50px;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1rem;
+    font-style: italic;
   }
-`
+`;
 
 class SubscribePage extends React.Component {
     constructor(props) {
@@ -48,42 +82,27 @@ class SubscribePage extends React.Component {
     render() {
         return (
             <NewsletterSection>
-                <h1>Bądź na bieżąco i zapisz się do newslettera!</h1>
-                <form action="https://cool.us16.list-manage.com/subscribe/post" method="POST" noValidate>
-                    {/*<input type="hidden" name="u" value="eb05e4f830c2a04be30171b01"/>*/}
-                    {/*<input type="hidden" name="id" value="8281a64779"/>*/}
-                    <label htmlFor='MERGE0'>
-                        Email
+                <h1>Bądź na bieżąco</h1>
+                <NewsBox>
+                    <h2>Zapisz się do newslettera</h2>
+                    <form action="https://cool.us16.list-manage.com/subscribe/post" method="POST" noValidate>
                         <input
                             type="email"
                             name="EMAIL"
-                            id="MERGE0"
                             value={this.state.emailValue}
                             onChange={(e) => {
                                 this.setState({emailValue: e.target.value});
                             }}
-                            autoCapitalize="off"
-                            autoCorrect="off"
+                            placeholder="Twój e-mail"
                         />
-                    </label>
-                    <input
-                        type="submit"
-                        value="Zapisz"
-                        name="subscribe"
-                        id="mc-embedded-subscribe"
-                        className="button"/>
-                    <div style={{position: 'absolute', left: '-5000px'}}
-                         aria-hidden='true'
-                         aria-label="Please leave the following three fields empty">
-                        <label htmlFor="b_email">Email: </label>
-                        <input type="email"
-                               name="b_email"
-                               tabIndex="-1"
-                               value=""
-                               placeholder="youremail@gmail.com"
-                               id="b_email"/>
-                    </div>
-                </form>
+                        <input
+                            type="submit"
+                            value="wyślij"
+                            name="subscribe"
+                            className="button"/>
+                    </form>
+                    <img src={Bucket} alt="wiszący kwietnik"/>
+                </NewsBox>
             </NewsletterSection>
         )
     }

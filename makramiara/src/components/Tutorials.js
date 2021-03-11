@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import BarMenu from "./BarMenu";
 import ReactPlayer from "react-player";
+import Logo from "../images/logo-white.svg";
 
 
 const PlayerWrapper = styled.div`
@@ -9,14 +10,14 @@ const PlayerWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 56.25%;
-  background-color: #F0E0ED;
+  background-color: #F4F4F4;
   height: 100vh;
   position: relative;
 
   h1 {
     text-align: center;
     font-size: 2rem;
-    color: #3b6531;
+    color: #263238;
     margin-bottom: 200px;
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
@@ -28,7 +29,7 @@ const PlayerWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F0E0ED;
+    background-color: #F4F4F4;
     position: absolute;
     top: 0;
     left: 0;
@@ -37,8 +38,30 @@ const PlayerWrapper = styled.div`
       transform: translate(100%, 150%);
     }
   }
-
 `;
+const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #263238;
+  border-radius: 25px 25px 0 0;
+  min-height: 320px;
+  width: 100%;
+  padding-bottom: 30px;
+  p {
+    color: #ffff;
+    padding: 30px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 10;
+  }
+
+  .logo__icon {
+    width: 10%;
+    padding-bottom: 30px;
+  }
+  `;
 
 const Tutorials = () => {
     return (
@@ -54,6 +77,10 @@ const Tutorials = () => {
                                  backgroundColor="#F0E0ED"
                     />
             </PlayerWrapper>
+            <Footer>
+                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+                <p>Made by Jagoda Frątczak 2021</p>
+            </Footer>
         </>
     );
 };
