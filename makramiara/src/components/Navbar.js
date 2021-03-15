@@ -1,41 +1,44 @@
 import React from 'react';
-import {menuData} from "./Menu.data";
 import {FaBars} from 'react-icons/fa';
 import styled, {css} from 'styled-components';
 import Log from '../images/logo-pink.svg';
-import {Link} from 'react-router-dom';
 
-const NavSection = styled.nav`
-  height: 150px;
+const Header = styled.header`
+  height: 9.5rem;
   background-color: #ffff;
-  display: flex;
-  justify-content: flex-end;
   z-index: 100;
   position: fixed;
-  width: 90%;
-  margin: 0 100px 0 100px;
-  border-radius: 0 0 25px 25px;
-
-
-  .logo {
-    height: 65px;
-    padding-bottom: 10px;
-    margin-top: 40px;
-    margin-right: 300px;
+  width: 100%;
+  border-radius: 0 0 1.6rem 1.6rem;
+  img {
+    height: 3.5rem;
+    margin-top: 2.8rem;
+    margin-left: 2rem;
+    @media screen and (min-width: 1100px) {
+      padding-right: 18rem;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    margin: 0 6.25rem 0 6.25rem;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
 `;
 
 const NavLink = css`
 
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   height: 100%;
   cursor: pointer;
   text-decoration: none;
   color: #E8505B;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin-right: 25px;
+  margin-right: 1.6rem;
 
   &:hover {
     filter: brightness(2);
@@ -43,45 +46,46 @@ const NavLink = css`
 `;
 
 const MenuBars = styled(FaBars)`
-  display: none;
-
-  @media screen and (max-width: 768px) {
-    display: block;
-    cursor: pointer;
-    color: #E8505B;
-    position: absolute;
-    height: 1.6em;
-    width: 1.6em;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 110%);
+  display: block;
+  cursor: pointer;
+  color: #E8505B;
+  position: absolute;
+  height: 1.6em;
+  width: 1.6em;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 100%);
+  
+  @media screen and (min-width: 1100px) {
+    display: none;
   }
 `;
-const NavMenu = styled.div`
+const NavMenu = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 0;
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+
   .menu__links {
     ${NavLink}
-  }
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
 
 const Navbar = ({toggle}) => {
 
     return (
-        <NavSection className="nav__section">
-            <a href="/makramiara"><img src={Log} alt="Logo makramiara" className="logo"/></a>
+        <Header className="nav__section">
             <MenuBars className="menu__bar" onClick={toggle}/>
+            <a href="/"><img src={Log} alt="Logo makramiara"/></a>
             <NavMenu className="nav__menu">
                 <a className="menu__links" href='/makrama' alt="O makramie">O makramie</a>
                 <a className="menu__links" href='/miarka' alt="Kalkulator - miarka sznurków">Miarka</a>
-                <a className="menu__links" href='/Tutoriale' alt="tutoriale">Tutorial</a>
+                <a className="menu__links" href='/tutoriale' alt="tutoriale">Tutorial</a>
                 <a className="menu__links" href='/galeria' alt="Galeria">Galeria</a>
             </NavMenu>
-        </NavSection>
+        </Header>
     );
 };
 

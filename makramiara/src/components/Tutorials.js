@@ -2,30 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import BarMenu from "./BarMenu";
 import ReactPlayer from "react-player";
-import Logo from "../images/logo-white.svg";
+import SubMenuFooter from "./SubMenuFooter";
 
 
-const PlayerWrapper = styled.div`
+const PlayerWrapper = styled.section`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 56.25%;
   background-color: #F4F4F4;
-  height: 100vh;
   position: relative;
 
   h1 {
+    padding-top: 25rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #263238;
-    margin-bottom: 200px;
-    @media screen and (max-width: 768px) {
-      font-size: 1.5rem;
-      margin-bottom: 650px;
+    width: 20rem;
+    @media screen and (min-width: 800px) {
+      padding-top: 0;
+      padding-bottom: 4rem;
+      font-size: 2rem;
+      width: 50rem;
     }
   }
 
   .react__player {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,54 +38,26 @@ const PlayerWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(175%, 75%);
-    @media screen and (max-width: 768px) {
-      transform: translate(100%, 150%);
+    transform: translate(100%, 150%);
+    @media screen and (min-width: 800px) {
+      transform: translate(175%, 75%);
     }
   }
 `;
-const Footer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #263238;
-  border-radius: 25px 25px 0 0;
-  min-height: 320px;
-  width: 100%;
-  padding-bottom: 30px;
-  p {
-    color: #ffff;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    z-index: 10;
-  }
-
-  .logo__icon {
-    width: 10%;
-    padding-bottom: 30px;
-  }
-  `;
-
 const Tutorials = () => {
     return (
         <>
             <BarMenu/>
             <PlayerWrapper className="player__wrapper">
+                <ReactPlayer className="react__player"
+                             url="https://fb.watch/47ErXpSosq/"
+                             controls={false}
+                             width="22%"
+                             height="22%"
+                />
                 <h1>Stwórz swój pierwszy kwietnik razem z tutorialem!</h1>
-                    <ReactPlayer className="react__player"
-                                 url="https://fb.watch/47ErXpSosq/"
-                                 controls={false}
-                                 width="22%"
-                                 height="22%"
-                                 backgroundColor="#F0E0ED"
-                    />
             </PlayerWrapper>
-            <Footer>
-                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
-                <p>Made by Jagoda Frątczak 2021</p>
-            </Footer>
+            <SubMenuFooter/>
         </>
     );
 };

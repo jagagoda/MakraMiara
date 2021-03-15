@@ -7,9 +7,9 @@ const Scroll = styled.div`
   position: fixed;
   bottom: 3%;
   right: 2%;
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 0.9rem;
   background-color: transparent;
   z-index: 1;
   color: #E8505B;
@@ -17,6 +17,8 @@ const Scroll = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    display: none;
  
 }
 .icon {
