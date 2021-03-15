@@ -4,39 +4,8 @@ import Logo from '../images/logo-pink.svg';
 import styled from 'styled-components';
 import { Redirect } from 'react-router-dom';
 
-const SectionText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  h2 {
-    color: #E8505B;
-    font-size: 75px;
-    margin-top: 100px;
-  }
-
-  img {
-    height: 110px;
-    margin-right: 60px;
-  }
-
-  button {
-    height: 80px;
-    width: 200px;
-    border-radius: 60px;
-    color: #ffff;
-    background-color: #263238;
-    font-size: 25px;
-    border: none;
-    font-weight: bold;
-    margin-top: 700px;
-    cursor: pointer;
-    outline: none;
-  }
-`;
-
-const MiarkaSection = styled.div`
+const MiarkaSection = styled.section`
+  padding-top: 3rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -48,15 +17,67 @@ const MiarkaSection = styled.div`
 }
 
 .miarka__box {
-  min-width: 1500px;
-  min-height: 1170px;
+  min-width: 28rem;
   background-color: #ffff;
   background-image: url(${Lady});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: bottom;
-  border-radius: 25px;
+  border-radius: 1.6rem;
+  width: 70vw;
+  @media screen and (min-width: 800px) {
+    min-width: 93.75rem;
+    min-height: 73.1rem;
+    border-radius: 1.6rem;
+    background-size: cover;
+    background-position: top;
+  }
 }
+`;
+const SectionText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 60vh;
+  h2 {
+    color: #E8505B;
+    font-size: 3rem;
+    text-align: center;
+    @media screen and (min-width: 800px) {
+      font-size: 4.7rem;
+      margin-top: 3rem;
+    }
+  }
+
+  img {
+    height: 4rem;
+    @media screen and (min-width: 800px) {
+      height: 6.9rem;
+      margin-right: 3.75rem;
+    }
+  }
+
+  button {
+    min-height: 3rem;
+    min-width: 10rem;
+    border-radius: 3.75rem;
+    color: #ffff;
+    background-color: #263238;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20rem;
+    @media screen and (min-width: 800px) {
+      padding: 1.5rem 2.5rem;
+      min-height: 5rem;
+      min-width: 12.5rem;
+      font-size: 1.6rem;
+      margin-top: 45.75rem;
+      margin-bottom: 4rem;
+    }
+  }
 `;
 
 const Miarka = () => {
@@ -65,10 +86,10 @@ const Miarka = () => {
         return (<Redirect to="/miarka"/>)
     }
     return (
-        <MiarkaSection>
+        <MiarkaSection className="miarka__section">
             <div className="miarka__box">
-                <SectionText className="text">
-                    <div className="top">
+                <SectionText className="miarka__text">
+                    <div className="calculator__text">
                         <h2>Kalkulator</h2>
                         <img className="logo" src={Logo} alt="Logo makramiara"/>
                     </div>
