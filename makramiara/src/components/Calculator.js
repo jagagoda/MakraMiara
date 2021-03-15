@@ -2,61 +2,37 @@ import React, {useState, useEffect} from "react";
 import Lady from '../images/lady.svg';
 import styled from 'styled-components';
 import BarMenu from "./BarMenu";
-import Logo from "../images/logo-white.svg";
+import SubMenuFooter from "./SubMenuFooter";
 
-const Footer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #263238;
-  border-radius: 25px 25px 0 0;
-  min-height: 320px;
-  width: 100%;
-  padding-bottom: 30px;
-
-  p {
-    color: #ffff;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    z-index: 10;
-  }
-
-  .logo__icon {
-    width: 10%;
-    padding-bottom: 30px;
-  }
-`;
-const SectionCalculator = styled.div`
+const SectionCalculator = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #F4F4F4;
-  min-height: 1200px;
+  height: 100%;
   width: 100%;
+  @media screen and (min-width: 800px) {
+    min-height: 75rem;
+  }
 
   .calculators {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 768px) {
-      min-width: 100%;
-    }
+    width: 100%;
   }
 
   h2 {
-    font-size: 75px;
+    font-size: 1.5rem;
     color: #E8505B;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    @media screen and (max-width: 768px) {
-      font-size: 1.5rem;
+    margin-top: 3.1rem;
+    margin-bottom: 3.1rem;
+    @media screen and (min-width: 800px) {
+      font-size: 4.7rem;
     }
-
   }
 
   .form__inputs {
@@ -69,19 +45,19 @@ const SectionCalculator = styled.div`
 
   .form__outputs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
+    @media screen and (min-width: 800px) {
+      flex-direction: row;
     }
   }
 
   label {
-    font-size: 25px;
+    font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     color: #263238;
-    padding: 20px 20px;
+    padding: 1.25rem 1.25rem;
     z-index: 10;
   }
 
@@ -90,12 +66,12 @@ const SectionCalculator = styled.div`
     justify-content: flex-end;
     border: none;
     border-radius: 5px;
-    width: 80px;
-    height: 50px;
+    width: 5rem;
+    height: 3.1rem;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin: 0 20px 20px 0;
+    margin: 0 1.25rem 1.25rem 0;
     color: #3b6531;
   }
 
@@ -104,35 +80,26 @@ const SectionCalculator = styled.div`
     font-family: 'Open Sans', sans-serif;
     color: #ffffff;
     border: none;
-    border-radius: 60px;
-    font-size: 20px;
+    border-radius: 3.75rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    padding: 30px 60px;
-    margin-left: 10px;
+    padding: 1.5rem 3rem;
     z-index: 10;
     outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 800px) {
+      padding: 1.9rem 3.75rem;
+      margin-left: 0.625rem;
+    }
   }
 
   .button__clear {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    @media screen and (max-width: 768px) {
-      margin-right: 25px;
-    }
-  }
-
-  .form__buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    @media screen and (max-width: 768px) {
-      margin-right: 25px;
-    }
+    margin-top: 3.1rem;
   }
 
   .calc__input {
@@ -143,20 +110,24 @@ const SectionCalculator = styled.div`
   }
 `;
 const SectionContainer = styled.div`
-  width: 1200px;
-  border-radius: 25px;
-  padding: 10px 0 40px 0;
+  max-width: 37.5rem;
+  border-radius: 1.6rem;
+  padding: 0.625rem 0 2.5rem 0;
   background-color: #ffff;
   position: relative;
-  margin-bottom: 200px;
-  @media screen and (max-width: 768px) {
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+  @media screen and (min-width: 800px) {
     border: 5px solid transparent;
+    min-width: 75rem;
+    margin-bottom: 12.5rem;
   }
+
   input {
     border-bottom: 2px solid #263238;
     border-radius: 0;
     outline: none;
-    color: #263238 ;
+    color: #263238;
     font-family: 'Open Sans', sans-serif;
   }
 
@@ -165,16 +136,13 @@ const SectionContainer = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 600px;
-    padding: 20px;
-    transform: translate(0, 63%);
-    @media screen and (max-width: 768px) {
+    height: 37.5rem;
+    padding: 1.25rem;
+    transform: translate(0, 56%);
+    @media screen and (max-width: 800px) {
       display: none;
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    min-width: 410px;
+   
   }
 `;
 
@@ -276,10 +244,7 @@ function Calculator(props) {
                     <img src={Lady} alt="kobieta z linijką i nożyczkami"/>
                 </SectionContainer>
             </SectionCalculator>
-            <Footer>
-                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
-                <p>Made by Jagoda Frątczak 2021</p>
-            </Footer>
+            <SubMenuFooter/>
         </>
     );
 }
