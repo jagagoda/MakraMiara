@@ -2,7 +2,7 @@ import React from 'react';
 import Flower from '../images/6.png';
 import styled from 'styled-components';
 import BarMenu from "./BarMenu";
-import Logo from "../images/logo-white.svg";
+import SubMenuFooter from "./SubMenuFooter";
 
 const SectionMacrame = styled.div`
   width: 100%;
@@ -15,85 +15,64 @@ const SectionMacrame = styled.div`
 
 const ProjectBox = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  margin-top: 9.4rem;
   align-items: center;
   width: 100%;
-  @media screen and (max-width: 768px) {
-    justify-content: center;
-    flex-direction: column;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-evenly;
     background-color: #F4F4F4;
-    margin-top: 150px;
+    margin-top: 9.4rem;
   }
 
   .box__image {
-    background-color: white;
-    border: 2px solid white;
-    padding: 20px;
-    margin-top: 20px;
-    @media screen and (max-width: 768px) {
-      background-color: #F4F4F4;
-      margin-top: 200px;
-      border: none;
-      height: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    height: 100%;
+    padding: 1.25rem;
+    @media screen and (min-width: 800px) {
+      background-color: white;
+      border: 2px solid white;
+      margin-top: 1.25rem;
     }
-  }
 
-  img {
-    width: auto;
-    height: 600px;
-  }
+    img {
+      max-width: 400px;
+      height: auto;
+      @media screen and (min-width: 800px) {
+        width: 100%;
+        height: 600px;
+      }
 
-  h2 {
-    font-size: 1.8rem;
-    color: #263238;
-    font-weight: bold;
-  }
+      p {
+        font-size: 1.5rem;
+        color: #263238;
+        padding: 50px;
+      }
 
-  p {
-    font-size: 1.5rem;
-    color: #263238;
-    padding: 50px;
-  }
-
-  .project__column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    li {
-      font-size: 1.2rem;
-      color: #263238;
-      padding: 10px;
-      text-align: left;
-    }
-  }
+      .project__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2 {
+          font-size: 1.8rem;
+          color: #263238;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+        li {
+          font-size: 1.2rem;
+          color: #263238;
+          padding: 10px;
+          text-align: left;
+        }
+      }
 `;
-const Footer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #263238;
-  border-radius: 25px 25px 0 0;
-  min-height: 320px;
-  width: 100%;
-  padding-bottom: 30px;
-  p {
-    color: #ffff;
-    padding: 30px;
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    z-index: 10;
-  }
-
-  .logo__icon {
-    width: 10%;
-    padding-bottom: 30px;
-  }
-  `;
-
-
 const Macrame1 = () => {
     return (
         <>
@@ -114,6 +93,7 @@ const Macrame1 = () => {
                     </div>
                 </ProjectBox>
             </SectionMacrame>
+            <SubMenuFooter/>
         </>
     );
 };
