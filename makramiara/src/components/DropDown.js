@@ -40,8 +40,9 @@ const DropDownMenu = styled.div`
   grid-template-rows: repeat(4, 80px);
   text-align: center;
   margin-bottom: 4rem;
-  @media screen and (max-width: 768px) {
-    grid-template-rows: repeat(4, 60px);
+  @media screen and (min-width: 800px) {
+    grid-template-rows: repeat(4, 80px);
+  
   }
 `;
 const DropDownLink = styled(Link)`
