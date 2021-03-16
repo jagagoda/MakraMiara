@@ -1,2 +1,2 @@
 # MakraMiara
-Aplikacja mierząca odpowiednią długość i ilość sznurków dla danego projektu makramy
+MakraMiara - jest to aplikacja webowa w całości napisana z użyciem biblioteki React oraz styled-components. Aplikacja ta kierowana jest do osób chcących zacząć swoją przygodę z makramą. Główną funkcją tej aplikacji jest możliwość obliczenia ilości i długości sznurków potrzebnych do stworzenia własnego projektu, co jest podstawowym problemem każdej początkującej osoby. Ponadto można tam znaleźć tutorial oraz gotowe projekty do wykonania. 
