@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MakraMiara/static/css/main.afd7172b.chunk.css",
-    "main.js": "/MakraMiara/static/js/main.05befec9.chunk.js",
-    "main.js.map": "/MakraMiara/static/js/main.05befec9.chunk.js.map",
+    "main.js": "/MakraMiara/static/js/main.79d3d9c7.chunk.js",
+    "main.js.map": "/MakraMiara/static/js/main.79d3d9c7.chunk.js.map",
     "runtime-main.js": "/MakraMiara/static/js/runtime-main.fc9fcaa5.js",
     "runtime-main.js.map": "/MakraMiara/static/js/runtime-main.fc9fcaa5.js.map",
-    "static/js/2.00059c8d.chunk.js": "/MakraMiara/static/js/2.00059c8d.chunk.js",
-    "static/js/2.00059c8d.chunk.js.map": "/MakraMiara/static/js/2.00059c8d.chunk.js.map",
+    "static/js/2.2d1aa12f.chunk.js": "/MakraMiara/static/js/2.2d1aa12f.chunk.js",
+    "static/js/2.2d1aa12f.chunk.js.map": "/MakraMiara/static/js/2.2d1aa12f.chunk.js.map",
     "index.html": "/MakraMiara/index.html",
     "static/css/main.afd7172b.chunk.css.map": "/MakraMiara/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.00059c8d.chunk.js.LICENSE.txt": "/MakraMiara/static/js/2.00059c8d.chunk.js.LICENSE.txt",
+    "static/js/2.2d1aa12f.chunk.js.LICENSE.txt": "/MakraMiara/static/js/2.2d1aa12f.chunk.js.LICENSE.txt",
     "static/media/6.2b93e4a5.png": "/MakraMiara/static/media/6.2b93e4a5.png",
     "static/media/brelok.4c339fdb.jpg": "/MakraMiara/static/media/brelok.4c339fdb.jpg",
     "static/media/bucket.8d568eb7.svg": "/MakraMiara/static/media/bucket.8d568eb7.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fc9fcaa5.js",
-    "static/js/2.00059c8d.chunk.js",
+    "static/js/2.2d1aa12f.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.05befec9.chunk.js"
+    "static/js/main.79d3d9c7.chunk.js"
   ]
 }
