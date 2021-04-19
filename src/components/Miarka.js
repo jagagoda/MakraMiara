@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import Lady from '../images/lady.svg';
 import Logo from '../images/logo-pink.svg';
 import styled from 'styled-components';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
+import Button from "./Button";
 
 const MiarkaSection = styled.section`
   padding-top: 3rem;
@@ -81,9 +82,10 @@ const SectionText = styled.div`
 `;
 
 const Miarka = () => {
-    const [isSubmit, setIsSubmit] = useState(true);
-    if (!isSubmit) {
-        return (<Redirect to="/miarka"/>)
+let history = useHistory();
+const handleClick = () => {
+    history.push("/miarka")
+    window.scrollTo(0,0);
     }
     return (
         <MiarkaSection className="miarka__section">
@@ -93,7 +95,7 @@ const Miarka = () => {
                         <h2>Kalkulator</h2>
                         <img className="logo" src={Logo} alt="Logo makramiara"/>
                     </div>
-                    <button onClick={() => setIsSubmit(false)}>zmierz się</button>
+                    <Button text="zmierz się" onClick={handleClick}/>
                 </SectionText>
             </div>
         </MiarkaSection>

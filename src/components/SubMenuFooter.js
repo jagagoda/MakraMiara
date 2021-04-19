@@ -17,6 +17,14 @@ const SubMenuFooter = styled.footer`
     width: 100%;
     padding-bottom: 1.9rem;
   }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
   .logo__icon {
     max-width: 25%;
     margin-top: 2rem;
@@ -41,7 +49,7 @@ const SubMenuFooter = styled.footer`
 const Footer = () => {
 return (
     <SubMenuFooter>
-        <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+        <a href="/"><img className="logo__icon" src={Logo} alt="logo Makramiara"/></a>
         <p>Made by Jagoda Frątczak 2021</p>
     </SubMenuFooter>
 )}

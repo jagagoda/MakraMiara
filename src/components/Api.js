@@ -83,7 +83,6 @@ const Api = () => {
     let [dog, setDog] = useState([]);
     const url = 'https://random.dog/woof.json';
     useEffect(() => {
-
         axios.request(url).then(response => {
             let hau;
             console.log(response.data.url.indexOf(".mp4"));
@@ -96,7 +95,6 @@ const Api = () => {
                     </video>)
             }
             setDog(hau);
-            console.log(response.data);
         })
             .catch(error => console.error(error));
     }, [url, refresh]);

@@ -17,6 +17,13 @@ const SectionFooter = styled.div`
     padding-bottom: 1.9rem;
     width: 100%;
   }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
   p {
     color: #ffff;
     padding: 1.9rem;
@@ -36,7 +43,7 @@ const SectionFooter = styled.div`
 const MainFooter = () => {
     return (
         <SectionFooter className="footer__section">
-                <img className="logo__icon" src={Logo} alt="logo Makramiara"/>
+            <a href="/"><img className="logo__icon" src={Logo} alt="logo Makramiara"/></a>
                 <p>Made by Jagoda Frątczak 2021</p>
         </SectionFooter>
     );
