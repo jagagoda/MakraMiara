@@ -1,10 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 import BarMenu from "./BarMenu";
 import ReactPlayer from "react-player";
 import SubMenuFooter from "./SubMenuFooter";
 import Title from "./Title";
-import {SectionCalculator, StyledAboutContainer, StyledSectionAbout} from "./styles/styles";
+import {StyledAboutContainer, StyledSectionAbout} from "./styles/styles";
 
 
 const Tutorials = () => {

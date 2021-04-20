@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import Brelok from "../images/brelok.jpg";
-import Makrama01 from "../images/6.png";
-import Makrama02 from "../images/pióra.png";
+import Kwietnik from "../images/6.png";
+import Piorka from "../images/pióra.png";
+import Title from "./Title";
+import SingleMainGallery from "./SingleMainGallery";
 
 const ProjectSection = styled.section`
   height: 100%;
@@ -30,7 +32,7 @@ const ProjectSection = styled.section`
       margin-top: 3.1rem;
       margin-bottom: 3.75rem;
     }
-    
+
   }
 
   h2 {
@@ -40,7 +42,7 @@ const ProjectSection = styled.section`
     padding: 0.625px;
     text-align: center;
   }
-  
+
   a img {
     width: 23rem;
     height: 28rem;
@@ -81,25 +83,15 @@ const ProjectContainer = styled.div`
   }
 `;
 
-
 const MainGallery = () => {
     return (
         <>
             <ProjectSection className="gallery__section">
-                <h1>Galeria</h1>
+                <Title text="Galeria"/>
                 <ProjectContainer className="gallery__container">
-                    <div className="box">
-                        <a href="/macrame1"><img src={Brelok} alt="" className="proj__img"/></a>
-                        <h2 className="stat__num">Makramowy brelok</h2>
-                    </div>
-                    <div className="box">
-                        <a href="/macrame2"><img src={Makrama01} alt="" className="proj__img"/></a>
-                        <h2 className="stat__num">Kwietnik</h2>
-                    </div>
-                    <div className="box">
-                        <a href="/macrame3"><img src={Makrama02} alt="" className="proj__img"/></a>
-                        <h2 className="stat__num"> Piórka</h2>
-                    </div>
+                    <SingleMainGallery href="/macrame1" src={Brelok} alt="brelok" text="Makramowy brelok"/>
+                    <SingleMainGallery href="/macrame2" src={Kwietnik} alt="kwietnik makramowy" text="Kwietnik"/>
+                    <SingleMainGallery href="/macrame3" src={Piorka} alt="makramowe piórka" text="Piórka"/>
                 </ProjectContainer>
             </ProjectSection>
 

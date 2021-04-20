@@ -11,7 +11,7 @@ function Calculator(props) {
     const [stringThickness, setStringThickness] = useState(0);
     const [resultWidth, setResultWidth] = useState(0);
     const [resultLength, setResultLength] = useState(0);
-    const [clear, setClear] = useState(false);
+    const [setClear] = useState(false);
 
 
     useEffect(() => {

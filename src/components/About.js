@@ -2,8 +2,6 @@ import React from 'react';
 import {
     StyledSectionAbout,
     StyledAboutContainer,
-    SectionContainer,
-    SectionCalculator
 } from "../components/styles/styles"
 import Bucket from '../images/bucket.svg';
 import BarMenu from "./BarMenu";

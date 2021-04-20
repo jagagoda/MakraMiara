@@ -1,11 +1,75 @@
 import styled from 'styled-components';
 
+
 export const colors = {
     backgroundLightGrey: "#F4F4F4",
     darkGrey: "#263238",
     fontColorPink: "#E8505B",
 }
+export const HeroSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #F4F4F4;
+  width: 100%;
+  height: 100%;
+  min-height: 30rem;
+  @media screen and (min-width: 800px) {
+    width: 100%;
+    height: 100vh;
+    min-height: 50rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #F4F4F4;
 
+  }
+  .image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 800px) {
+      margin-right: 3.1rem;
+    }
+  }
+
+  img {
+    width: 18rem;
+    margin-top: 8rem;
+    flex: 1;
+    @media screen and (min-width: 800px) {
+      width: 44rem;
+      margin-left: 19rem;
+    }
+  }
+
+  .hero__text {
+    max-height: 50%;
+    min-width: 20%;
+    background-color: transparent;
+    color: #304c28;
+    z-index: 1;
+    @media screen and (min-width: 800px) {
+      width: 50%;
+    }
+    p {
+      font-size: 2rem;
+      padding: 30px 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #E8505B;
+      @media screen and (min-width: 800px) {
+        font-size: 3rem;
+        text-align: left;
+      }
+    }
+
+`;
 export const StyledSectionAbout = styled.section`
   display: flex;
   flex-direction: column;
@@ -15,14 +79,6 @@ export const StyledSectionAbout = styled.section`
   height: 100%;
   background-color: ${(props) => props.color ? props.color : colors.backgroundLightGrey};
   padding-bottom: 3rem;
-  //
-  //.about__title {
-  //  padding: 0.2em;
-  //  margin-top: 16rem;
-  //}
-  //.gallery__title {
-  //  margin-top: 16rem;
-  //}
 `;
 
 export const StyledAboutContainer = styled.div`
@@ -30,36 +86,49 @@ export const StyledAboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: ${(props)=> props.paddingBottom}rem;
-  margin-bottom: ${(props)=> props.marginBottom}rem;
+  padding-bottom: ${(props) => props.paddingBottom}rem;
+  margin-bottom: ${(props) => props.marginBottom}rem;
   padding-top: 0.5em;
   width: ${(props) => props.width}rem;
   height: ${(props) => props.height}rem;
   border-radius: 1.6rem;
   background-color: #ffff;
-h1{
-padding-top: 2em;
-}
-}
-  .image__container {
-    width: 100%;
-    height: 100%;
+  .react__player {
+    max-width: 35%;
     @media screen and (min-width: 800px) {
-      font-size: 4.7rem;
-      display: inline-block;
+      min-width: 70%;
+      min-height: auto;
     }
   }
-
-  p {
-    padding-bottom: 1.5em;
-    max-width: 30%;
-    font-size: 1.2em;
+  h1 {
+    padding-top: 1em;
+    max-width: 35%;
     text-align: center;
-    color: ${colors.darkGrey};
     @media screen and (min-width: 800px) {
-      font-size: 1.6rem;
-      max-width: 50%;
+      min-width: 100%;
     }
+  }
+}
+
+.image__container {
+  width: 100%;
+  height: 100%;
+  @media screen and (min-width: 800px) {
+    font-size: 4.7rem;
+    display: inline-block;
+  }
+}
+
+p {
+  padding-bottom: 1.5em;
+  max-width: 30%;
+  font-size: 1.2em;
+  text-align: center;
+  color: ${colors.darkGrey};
+  @media screen and (min-width: 800px) {
+    font-size: 1.6rem;
+    max-width: 50%;
+  }
 `;
 
 export const StyledTitle = styled.h2`
@@ -84,9 +153,11 @@ export const SectionCalculator = styled.section`
   @media screen and (min-width: 800px) {
     min-height: 75rem;
   }
-.calculator__title{
-  margin-top: 1em;
-}
+
+  .calculator__title {
+    margin-top: 1em;
+  }
+
   .calculators {
     display: flex;
     flex-direction: column;
@@ -292,3 +363,70 @@ export const ProjectBoxes = styled.div`
     }
 `;
 
+export const SectionMacrame = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ProjectBox = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  margin-top: 9.4rem;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #F4F4F4;
+    margin-top: 9.4rem;
+  }
+
+  .box__image {
+    background-color: #F4F4F4;
+    border: none;
+    height: 100%;
+    padding: 1.25rem;
+    @media screen and (min-width: 800px) {
+      background-color: white;
+      border: 2px solid white;
+      margin-top: 1.25rem;
+    }
+
+    img {
+      max-width: 400px;
+      height: auto;
+      @media screen and (min-width: 800px) {
+        width: 100%;
+        height: 600px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: #263238;
+        padding: 50px;
+      }
+
+      .project__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+        }
+
+        li {
+          font-size: 1.2rem;
+          color: #263238;
+          padding: 10px;
+          text-align: left;
+        }
+      }
+`;
