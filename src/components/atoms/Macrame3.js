@@ -1,5 +1,5 @@
 import React from 'react';
-import Leaf from '../images/pióra.png';
+import Leaf from '../../images/pióra.png';
 import SingleMacrame from "./SingleMacrame";
 
 

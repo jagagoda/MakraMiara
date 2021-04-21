@@ -1,12 +1,10 @@
 import React from 'react';
-import {
-    StyledSectionAbout,
-    StyledAboutContainer,
-} from "../components/styles/styles"
-import Bucket from '../images/bucket.svg';
-import BarMenu from "./BarMenu";
-import SubMenuFooter from "./SubMenuFooter";
-import Title from "./Title";
+import { StyledAboutContainer } from "../styles/pages";
+import { StyledSectionAbout } from "../styles/organisms";
+import Bucket from '../../images/bucket.svg';
+import BarMenu from "../molecules/BarMenu";
+import SubMenuFooter from "../molecules/SubMenuFooter";
+import Title from "../atoms/Title";
 
 
 const About = () => {

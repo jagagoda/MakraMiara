@@ -1,16 +1,15 @@
 import React from "react";
-import '../App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import HomePage from "./HomePage";
-import About from "./About";
-import Api from "./Api";
-import Tutorials from "./Tutorials";
-import Gallery from "./Gallery";
-import Calculator from "./Calculator";
-import Macrame1 from "./Macrame1";
-import GlobalStyle from "./GlobalStyles";
-import Macrame2 from "./Macrame2";
-import Macrame3 from "./Macrame3";
+import HomePage from "./components/pages/HomePage";
+import About from "./components/pages/About";
+import Api from "./components/organisms/Api";
+import Tutorials from "./components/pages/Tutorials";
+import Gallery from "./components/organisms/Gallery";
+import Calculator from "./components/pages/Calculator";
+import Macrame1 from "./components/atoms/Macrame1";
+import GlobalStyle from "./components/atoms/GlobalStyles";
+import Macrame2 from "./components/atoms/Macrame2";
+import Macrame3 from "./components/atoms/Macrame3";
 
 function App() {
     return (

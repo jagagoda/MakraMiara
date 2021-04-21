@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledTitle} from "./styles/styles";
+import {StyledTitle} from "../styles/atoms";
 
 const Title = ({text, size, className}) => {
     return (

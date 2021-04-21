@@ -1,5 +1,5 @@
 import React from 'react';
-import Brelok from '../images/brelok.jpg';
+import Brelok from '../../images/brelok.jpg';
 import SingleMacrame from "./SingleMacrame";
 
 

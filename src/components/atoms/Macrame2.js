@@ -1,5 +1,5 @@
 import React from 'react';
-import Flower from '../images/6.png';
+import Flower from '../../images/6.png';
 import SingleMacrame from "./SingleMacrame";
 
 

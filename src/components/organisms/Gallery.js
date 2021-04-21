@@ -1,15 +1,15 @@
 import React from 'react';
-import Brelok from '../images/brelok.jpg';
-import Makrama01 from '../images/6.png';
-import Makrama02 from '../images/pióra.png';
-import BarMenu from "./BarMenu";
-import SubMenuFooter from "./SubMenuFooter";
-import Title from "./Title";
-import {ProjectBoxes, StyledAboutContainer, StyledSectionAbout} from "./styles/styles";
-import SingleGallery from "./SingleGallery";
+import Brelok from '../../images/brelok.jpg';
+import Makrama01 from '../../images/6.png';
+import Makrama02 from '../../images/pióra.png';
+import BarMenu from "../molecules/BarMenu";
+import SubMenuFooter from "../molecules/SubMenuFooter";
+import Title from "../atoms/Title";
+import { ProjectBoxes, StyledSectionAbout } from "../styles/organisms";
+import { StyledAboutContainer } from "../styles/pages";
+import SingleGallery from "../atoms/SingleGallery";
 
 const Gallery = () => {
-
     return (
         <>
             <BarMenu/>

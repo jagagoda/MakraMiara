@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from "react";
-import Lady from '../images/lady.svg';
-import BarMenu from "./BarMenu";
-import SubMenuFooter from "./SubMenuFooter";
-import Title from "./Title";
-import {SectionCalculator, SectionContainer} from "./styles/styles";
-import Button from "./Button";
-function Calculator(props) {
+import Lady from '../../images/lady.svg';
+import BarMenu from "../molecules/BarMenu";
+import SubMenuFooter from "../molecules/SubMenuFooter";
+import Title from "../atoms/Title";
+import {SectionCalculator, SectionContainer} from "../styles/pages";
+import Button from "../atoms/Button";
+
+function Calculator() {
     const [stringLength, setStringLength] = useState(0);
     const [stringWidth, setStringWidth] = useState(0);
     const [stringThickness, setStringThickness] = useState(0);

@@ -1,9 +1,10 @@
-import BarMenu from "./BarMenu";
-import SubMenuFooter from "./SubMenuFooter";
+import BarMenu from "../molecules/BarMenu";
+import SubMenuFooter from "../molecules/SubMenuFooter";
 import {
     SectionMacrame,
     ProjectBox,
-} from "../components/styles/styles"
+} from "../styles/atoms"
+
 const SingleMacrame = ({title, subtitle, text1, text2, text3, src, alt}) => {
     return (
         <>

@@ -1,9 +1,10 @@
 import React from 'react';
-import BarMenu from "./BarMenu";
+import BarMenu from "../molecules/BarMenu";
 import ReactPlayer from "react-player";
-import SubMenuFooter from "./SubMenuFooter";
-import Title from "./Title";
-import {StyledAboutContainer, StyledSectionAbout} from "./styles/styles";
+import SubMenuFooter from "../molecules/SubMenuFooter";
+import Title from "../atoms/Title";
+import {StyledAboutContainer} from "../styles/pages";
+import {StyledSectionAbout} from "../styles/organisms";
 
 
 const Tutorials = () => {

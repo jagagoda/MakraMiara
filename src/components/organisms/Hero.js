@@ -1,6 +1,6 @@
 import React from 'react';
-import Macrame from '../images/macrame.png';
-import {HeroSection} from "./styles/styles";
+import Macrame from '../../images/macrame.png';
+import {HeroSection} from "../styles/organisms";
 
 const Hero = () => {
 
