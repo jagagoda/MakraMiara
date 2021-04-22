@@ -26,6 +26,7 @@ export const ImageSection = styled.section`
   width: 100%;
   min-height: 40rem;
   background-color: ${colors.backgroundLightGrey};
+  padding-top: 10rem;
   @media screen and (min-width: 1100px) {
     min-height: 50rem;
   }

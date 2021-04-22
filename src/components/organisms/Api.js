@@ -25,8 +25,7 @@ const Api = () => {
 
     if (dog) {
         return (
-            <>
-                <ImageSection className="image__section">
+                <ImageSection id='dog' className="image__section">
                     <ImageBox className="image__box">
                         <h2>Psia telewizja</h2>
                         {
@@ -38,8 +37,6 @@ const Api = () => {
                         </button>
                     </ImageBox>
                 </ImageSection>
-            </>
-
         )
     }
 }
