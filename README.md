@@ -1,2 +1,7 @@
 # MakraMiara
-MakraMiara - jest to aplikacja webowa w całości napisana z użyciem biblioteki React oraz styled-components. Aplikacja ta kierowana jest do osób chcących zacząć swoją przygodę z makramą. Główną funkcją tej aplikacji jest możliwość obliczenia ilości i długości sznurków potrzebnych do stworzenia własnego projektu, co jest podstawowym problemem każdej początkującej osoby. Ponadto można tam znaleźć tutorial oraz gotowe projekty do wykonania. 
+
+MakraMiara - this is a responsive web application entirely written using React and styled-components.
+
+Check it here -> https://makramiara.herokuapp.com/
+
+This application is addressed to people who want to start their adventure with macramé. The main function of this application is the ability to calculate the number and length of strings needed to create your own project, which is a basic problem of every beginner. Moreover, you can find there a tutorial and a gallery of ready-made projects to make. 
