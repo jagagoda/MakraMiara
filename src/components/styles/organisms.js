@@ -48,6 +48,7 @@ export const ImageSection = styled.section`
   }
 
   .refresh__button {
+    z-index: 10;
     background-color: ${colors.darkGrey};
     color: white;
     padding: 1.9rem 3.75rem;

@@ -12,7 +12,7 @@ function Calculator() {
     const [stringThickness, setStringThickness] = useState(0);
     const [resultWidth, setResultWidth] = useState(0);
     const [resultLength, setResultLength] = useState(0);
-    const [setClear] = useState(false);
+    const [clear, setClear] = useState(false);
 
 
     useEffect(() => {
@@ -30,21 +30,21 @@ function Calculator() {
             setResultLength((stringLength) * 8);
         }
     }, [stringLength]);
+
     const Width = (e) => {
-        setStringWidth(parseInt(e.target.value));
+  return isNaN(stringWidth) ? 0 : setStringWidth(e.target.value);
     }
 
     const Length = (e) => {
-        setStringLength(parseInt(e.target.value));
+       return isNaN(stringLength) ? 0 : setStringLength(e.target.value);
+    }
 
-    }
     const Thickness = (e) => {
-        setStringThickness(parseInt(e.target.value));
+        return isNaN(stringThickness) ? 0 : setStringThickness(e.target.value);
     }
+
     const Clear = (e) => {
         e.preventDefault();
-
-        document.querySelector('form').reset();
         setClear(true);
         setStringLength(0);
         setStringWidth(0);
@@ -90,9 +90,9 @@ function Calculator() {
                         <form className="calc__outputs">
                             <div className="form__outputs">
                                 <label>Potrzebujesz</label>
-                                <input type="text" id="widthResult" value={resultWidth} readOnly/>
+                                <input type="text" id="widthResult" value={(resultWidth).toFixed(0)} readOnly/>
                                 <label>sznurków o długości</label>
-                                <input type="text" id="lengthResult" value={resultLength} readOnly/>
+                                <input type="text" id="lengthResult" value={(resultLength).toFixed(0)} readOnly/>
                                 <label>cm</label>
                             </div>
                             <div className="button__clear">

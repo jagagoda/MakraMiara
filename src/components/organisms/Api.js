@@ -25,18 +25,20 @@ const Api = () => {
 
     if (dog) {
         return (
-                <ImageSection id='dog' className="image__section">
-                    <ImageBox className="image__box">
-                        <h2>Psia telewizja</h2>
-                        {
-                            dog
-                        }
-                        <button onClick={(e) => {
-                            setRefresh(!refresh)
-                        }} className='refresh__button'>pies raz!
-                        </button>
-                    </ImageBox>
-                </ImageSection>
+            <ImageSection id='dog' className="image__section">
+                <ImageBox className="image__box">
+                    <h2>Psia telewizja</h2>
+                    {
+                        dog
+                    }
+                    <button
+                        onClick={(e) => {setRefresh(!refresh)}}
+                        className='refresh__button'
+                    >
+                        pies raz!
+                    </button>
+                </ImageBox>
+            </ImageSection>
         )
     }
 }
